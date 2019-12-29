@@ -310,7 +310,7 @@ Select-Object @{n='ID';e={if (($_.SecurityBulletinIDs).Count -eq 0) {$_.KbArticl
 @{n='CVEIDs';e={if (($_.CveIDs).Count  -eq 0) {''} Else {$_.CveIDs}}},
 @{n='Categories';e={$_.Categories | Select-Object -ExpandProperty Name}} | # Select-Object -ExpandProperty Name is required for PowerShell v5.
 Sort-Object -Property $_.KbArticleIds | Export-Csv $outFile -NoTypeInformation -Encoding ASCII
-Write-Output "[INFO] Saving report tpo $outFile."
+Write-Output "[INFO] Saving report to $outFile."
 
 #endregion CreateUpdateSession
 

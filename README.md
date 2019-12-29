@@ -1,4 +1,4 @@
-# Get-WinUpdastesOffline
+# Get-WinUpdatesOffline
 
 This PowerShell script will search for either installed or missing Windows Updates and output the results to a csv file. The script does not need to connect to the internet to search for updates. The script works in offline mode but it does require the Microsoft wsusscn2.cab file to be downloaded for use. The cab file can be downloaded from http://go.microsoft.com/fwlink/?LinkId=76054. This script is an enhanced version of Microsoft's VB script from https://docs.microsoft.com/en-us/windows/win32/wua_sdk/using-wua-to-scan-for-updates-offline.
 
@@ -33,6 +33,12 @@ Produces a csv report that gathers installed Windows Updates and saves the repor
 .EXAMPLE
 .\Get-WinUpdatesOffline.ps1 -cab "c:\temp\wsusscn2.cab" -outDir "c:\temp" -isInstalled No -skipAgeCheck Yes
 Produces a csv report that gathers missing Windows Updates and saves the report to c:\temp. The age check for wsusscn2.cab file is not performed.
+
+## Sample Output
+
+Sample_MIGTRTUAD01MIGTRTUAD01_201912282343.csv shows what the csv report looks like once generated. This report was run on a Windows 7 PC with very few updates installed. 
+
+Sample_MIGTRTUAD01MIGTRTUAD01_201912282343.xlsx is a formatted report of the csv file. 
 
 ## Why This Script
 
